@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+__pycache__/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.development
+
+# Archive and temporary files
+archive/
+
+# Personal systemd service files (keep templates only)
+etc/claude-bridge.target
+etc/claude-bridge.service
+etc/claude-bridge-api.service
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local configuration
+config/local.*
+secrets/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary folders
+tmp/
+temp/
+.env
+archive/
+./*.md
+tests/
+plans/

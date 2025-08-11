@@ -1,0 +1,23 @@
+[Unit]
+Description=Claude Mattermost Bridge API Service
+After=network.target
+PartOf=claude-bridge.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/npm run api
+WorkingDirectory=/path/to/claude-mattermost-bridge
+User=your-username
+Group=your-username
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=claude-bridge-api
+
+# Environment - load from .env file
+EnvironmentFile=/path/to/claude-mattermost-bridge/.env
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
