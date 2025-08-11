@@ -59,3 +59,4 @@ archive/
 ./*.md
 tests/
 plans/
+package-lock.json

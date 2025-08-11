@@ -4,17 +4,11 @@
   "description": "Claude Desktop Interface - Unified automation bridge for Claude Desktop",
   "main": "claude_api_server.js",
   "scripts": {
-    "test": "echo 'Test scripts need updating after cleanup'",
-    "test:all": "node tests/run-all-tests.js",
-    "test:integration": "node tests/full_integration_test.js",
-    "test:dom": "node tests/dom_injection_test.js",
-    "test:flow": "node tests/complete_flow_test.js",
-    "start": "node bridge-v2.js",
-    "dev": "echo 'Dev script needs updating after cleanup'",
+    "start": "node claude_api_server.js",
+    "dev": "nodemon claude_api_server.js",
     "api": "nodemon claude_api_server.js",
     "bridge": "python3 claude_bridge/main.py mattermost",
     "bridge:working": "concurrently \"npm run api\" \"npm run bridge\"",
-    "bridge:v2": "node bridge-v2.js",
     "dev:all": "concurrently \"npm run api\" \"npm run bridge\""
   },
   "dependencies": {
